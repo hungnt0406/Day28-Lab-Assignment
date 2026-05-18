@@ -3,6 +3,8 @@ import requests
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 EMBED_URL = os.environ["EMBED_NGROK_URL"]
 qdrant = QdrantClient(host="localhost", port=6333)

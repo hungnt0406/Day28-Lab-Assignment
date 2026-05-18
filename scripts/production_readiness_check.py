@@ -50,7 +50,7 @@ check("Redis reachable", lambda:
 print("\n=== KAFKA ===")
 def check_kafka_topics():
     result = subprocess.run(
-        ["docker", "exec", "lab28-kafka-1", "kafka-topics", "--list",
+        ["docker", "exec", "day28-lab-assignment-kafka-1", "kafka-topics", "--list",
          "--bootstrap-server", "localhost:9092"],
         capture_output=True, text=True
     )
